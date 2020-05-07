@@ -19,16 +19,16 @@ const fetchFileName = service => {
 
     const fileSuffix = day + "-" + (month + 1) + "-" + year;
     const loginFileName = "login-" + fileSuffix + ".log"
-    /*const cartFileName = "cart-service-" + fileSuffix + ".log"
-    const deliveryFileName = "delivery-service-" + fileSuffix + ".log"*/
+    const favFileName = "favorites-" + fileSuffix + ".log"
+    const shopFileName = "shop-" + fileSuffix + ".log"
 
     switch (service) {
         case "Login":
             return loginFileName
-        /*case "DeliveryService":
-            return deliveryFileName;
-        case "CartService":
-            return cartFileName;*/
+        case "Shop":
+            return shopFileName;
+        case "Favorites":
+            return favFileName;
         default:
             return null;
     }
